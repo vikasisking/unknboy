@@ -437,7 +437,7 @@ def start(message):
     # ---- Required Channels ----
     # Use channel ID for private one, and username for public
     REQUIRED_CHANNELS = [
-        "@pakcybernum",  # ← Replace this with your private channel's chat ID
+        "@pakcybernum",  #https://t.me/pakcybernum ← Replace this with your private channel's chat ID
         "-1003147926675"
     ]
 
@@ -457,7 +457,7 @@ def start(message):
         markup = types.InlineKeyboardMarkup()
         # Always show both join buttons
         markup.add(types.InlineKeyboardButton("🚀 Join Channel 1", url="https://t.me/pakcybernum"))
-        markup.add(types.InlineKeyboardButton("🚀 Join Channel 2", url="https://t.me/+2J4qCbu8SUU2MDc9s"))
+        markup.add(types.InlineKeyboardButton("🚀 Join Channel 2", url="https://t.me/+2J4qCbu8SUU2MDc9"))
         bot.send_message(chat_id, "❌ You must join all required channels to use the bot.", reply_markup=markup)
         return
 
