@@ -23,8 +23,8 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # ---------------- CONFIG ----------------
-BOT_TOKEN = "8438490405:AAEf7Go-io_RUzgDCfHTEuSw7iEJf_SSO2E"
-ADMIN_ID = 7139335625
+BOT_TOKEN = "7685653275:AAFGs0q0TDt9MEYceMK8IF0LyzPym_cwX2c"
+ADMIN_ID = 6368332667
 bot = telebot.TeleBot(BOT_TOKEN)
 
 DATA_FILE = "bot_data.json"
@@ -34,11 +34,11 @@ os.makedirs(NUMBERS_DIR, exist_ok=True)
 # New Panel OTP API Config
 LOGIN_URL = "http://51.89.99.105/NumberPanel/signin"
 XHR_URL = "http://51.89.99.105/NumberPanel/agent/res/data_smscdr.php?fdate1=2025-09-05%2000:00:00&fdate2=2026-09-04%2023:59:59&frange=&fclient=&fnum=&fcli=&fgdate=&fgmonth=&fgrange=&fgclient=&fgnumber=&fgcli=&fg=0&sEcho=1&iColumns=9&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=2&mDataProp_0=0&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=1&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=2&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=3&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=4&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=5&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=6&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=7&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&mDataProp_8=8&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=false&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=desc&iSortingCols=1&_=1756968295291"
-USERNAME = os.getenv("USERNAME", "ali12555")
-PASSWORD = os.getenv("PASSWORD", "ali12555")
+USERNAME = os.getenv("USERNAME", "Muhammad1222")
+PASSWORD = os.getenv("PASSWORD", "Muhammad1222")
 OTP_GROUP_IDS = ["-10029082859"]  # Updated with multiple group IDs
-CHANNEL_LINK = "https://t.me/+zGBLO8pOSylmODMx"
-DEVELOPER_ID = "@xionotpsbot"
+CHANNEL_LINK = "https://t.me/pakcybernum"
+DEVELOPER_ID = "@Pakcyberotp111bo"
 
 # Headers for New Panel
 HEADERS = {
@@ -414,7 +414,7 @@ def send_random_number(chat_id, country=None, edit=False):
     markup = types.InlineKeyboardMarkup()
     markup.add(types.InlineKeyboardButton("🔄 Change Number", callback_data="change_number"))
     markup.add(types.InlineKeyboardButton("🌍 Change Country", callback_data="change_country"))
-    markup.add(types.InlineKeyboardButton("🔗 Code GROUP", url="http://t.me/xion_otps"))
+    markup.add(types.InlineKeyboardButton("🔗 Code GROUP", url="https://t.me/pakcyberotp1"))
 
     if chat_id in user_messages:
         bot.edit_message_text(text, chat_id, user_messages[chat_id].message_id, reply_markup=markup, parse_mode="Markdown")
@@ -437,8 +437,8 @@ def start(message):
     # ---- Required Channels ----
     # Use channel ID for private one, and username for public
     REQUIRED_CHANNELS = [
-        "-1002635378817",  # ← Replace this with your private channel's chat ID
-        "@freeotpss"
+        "@pakcybernum",  # ← Replace this with your private channel's chat ID
+        ""
     ]
 
     # ---- Check Membership ----
@@ -456,8 +456,8 @@ def start(message):
     if not_joined:
         markup = types.InlineKeyboardMarkup()
         # Always show both join buttons
-        markup.add(types.InlineKeyboardButton("🚀 Join Channel 1", url="https://t.me/+zGBLO8pOSylmODMx"))
-        markup.add(types.InlineKeyboardButton("🚀 Join Channel 2", url="https://t.me/freeotpss"))
+        markup.add(types.InlineKeyboardButton("🚀 Join Channel 1", url="https://t.me/pakcybernum"))
+        markup.add(types.InlineKeyboardButton("🚀 Join Channel 2", url="https://t.me/+2J4qCbu8SUU2MDc9s"))
         bot.send_message(chat_id, "❌ You must join all required channels to use the bot.", reply_markup=markup)
         return
 
